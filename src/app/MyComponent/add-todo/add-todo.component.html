@@ -1,0 +1,12 @@
+<h3 class="my-5">Add Todo</h3>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group mb-3">
+        <label for="title" class="form-label">Enter Todo Title</label>
+        <input type="text" [(ngModel)]="title" class="form-control" #box name="title" (keyup)="ValueInput(box.value)">
+    </div>
+    <div class="form-group mb-3">
+        <label for="desc" class="form-label">Enter Todo Desciption</label>
+        <textarea class="form-control" [(ngModel)]="desc" id="desc" rows="3" name="desc"></textarea>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary mb-5">
+</form>
